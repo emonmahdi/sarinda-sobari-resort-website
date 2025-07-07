@@ -9,6 +9,8 @@
   <title>Sarinda Sobari Resort</title>
   <!-- Bootstrap Css -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Aos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <!-- Font Awesome Css -->
   <link rel="stylesheet" href="assets/css/all.min.css" />
   <!-- Custom Style Css -->
@@ -21,7 +23,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img src="assets/img/sarinda-logo.png" height="65px" alt="Sarinda logo">t</a>
+          <img src="assets/img/sarinda-logo.png" height="65px" alt="Sarinda logo"></a>
         <button class="navbar-toggler" type="button" onclick="toggleMobileMenu()">
           <i class="fas fa-bars text-white fs-3"></i>
         </button>
@@ -90,20 +92,370 @@
   </header>
   <!-- Header End -->
 
-  <section class="py-5">
+  <section class="reservation-bar py-4" data-aos="fade-up">
     <div class="container">
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora debitis repellat architecto adipisci...
-      </p>
+      <form class="row g-3 align-items-end justify-content-center reservation-form">
+
+        <!-- Date -->
+        <div class="col-md-2 col-sm-6">
+          <label class="form-label">Date</label>
+          <input type="date" class="form-control" required />
+        </div>
+
+        <!-- Time -->
+        <div class="col-md-2 col-sm-6">
+          <label class="form-label">Time</label>
+          <input type="time" class="form-control" required />
+        </div>
+
+        <!-- Guests -->
+        <div class="col-md-2 col-sm-6">
+          <label class="form-label">Guests</label>
+          <input type="number" class="form-control" min="1" value="2" required />
+        </div>
+
+        <!-- Room Type -->
+        <div class="col-md-3 col-sm-6">
+          <label class="form-label">Room Type</label>
+          <select class="form-select" required>
+            <option disabled selected>Select Room</option>
+            <option>Deluxe Villa</option>
+            <option>Lake View Suite</option>
+            <option>Hill Cottage</option>
+          </select>
+        </div>
+
+        <!-- Button -->
+        <div class="col-md-2 col-sm-12 text-center">
+          <button type="submit" class="btn btn-reserve w-100">Reserve</button>
+        </div>
+
+      </form>
     </div>
   </section>
 
-  <footer class="bg-dark text-white text-center py-4">
-    <p class="mb-0">&copy; 2025 Sarinda Sobari Resort. All Rights Reserved.</p>
+
+
+  <!-- About Section Start -->
+  <section class="about-us-section py-5">
+    <div class="container">
+      <!-- Header -->
+      <div class="section-header text-center mb-5" data-aos="zoom-in">
+        <h2 class="title">About Sarinda Sobari Resort</h2>
+        <p class="subtitle">A sanctuary of comfort, elegance, and natural harmony in the heart of nature.</p>
+      </div>
+
+      <div class="row align-items-center gy-5">
+        <!-- Left Image -->
+        <div class="col-lg-6" data-aos="flip-left">
+          <div class="about-image-wrapper">
+            <img src="assets/img/s1.jpg" alt="Resort View" class="img-fluid about-img shadow" />
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="about-content">
+            <h3 class="about-title">Welcome to Your Nature Escape</h3>
+            <p class="about-text lead">
+              Located in the serene heart of nature, Sarinda Sobari Resort blends traditional elegance with eco-modern
+              living. Our resort offers a tranquil escape where birdsong replaces your alarm clock and every sunset
+              paints
+              the sky with magic.
+            </p>
+            <p class="about-text">
+              Enjoy lakefront views, treehouse cabins, wellness spas, and gourmet local dining. Whether it’s a
+              honeymoon,
+              solo recharge, or family vacation — we offer the space, service, and soul you seek.
+            </p>
+            <a href="#contact" class="btn btn-glass mt-3">Plan Your Stay</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Counters -->
+      <div class="row text-center mt-5" data-aos="fade-up">
+        <div class="col-md-3 col-6">
+          <div class="counter-box shadow-sm">
+            <h3><span class="counter" data-target="1200">0</span>+</h3>
+            <p>Happy Guests</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="counter-box shadow-sm">
+            <h3><span class="counter" data-target="35">0</span>+</h3>
+            <p>Luxury Rooms</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 mt-4 mt-md-0">
+          <div class="counter-box shadow-sm">
+            <h3><span class="counter" data-target="25">0</span></h3>
+            <p>Acres of Nature</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 mt-4 mt-md-0">
+          <div class="counter-box shadow-sm">
+            <h3><span class="counter" data-target="50">0</span>+</h3>
+            <p>Staff Members</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Section End -->
+  <!-- Room Section Start -->
+  <section class="our-rooms-section">
+    <div class="section-header">
+      <h2>Our Rooms</h2>
+      <p>Elegant, Comfortable, and Immersed in Nature</p>
+    </div>
+
+    <div class="room-grid">
+      <!-- Room Card -->
+      <div class="room-card">
+        <img src="assets/img/room/1.webp" alt="Deluxe Villa" />
+        <div class="room-overlay">
+          <h3>Deluxe Villa</h3>
+          <p>Perfect for couples with private balcony and lush garden view.</p>
+          <span class="price">$180 / Night</span>
+          <a href="#" class="btn-book">Book Now</a>
+        </div>
+      </div>
+
+      <!-- Repeat for 3 more cards -->
+      <div class="room-card">
+        <img src="assets/img/room/2.webp" alt="Lake View Suite" />
+        <div class="room-overlay">
+          <h3>Lake View Suite</h3>
+          <p>Wake up to the serene beauty of lake and sky.</p>
+          <span class="price">$210 / Night</span>
+          <a href="#" class="btn-book">Book Now</a>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <img src="assets/img/room/3.webp" alt="Hill Cottage" />
+        <div class="room-overlay">
+          <h3>Hill Cottage</h3>
+          <p>Private hill-side cottages with panoramic views.</p>
+          <span class="price">$250 / Night</span>
+          <a href="#" class="btn-book">Book Now</a>
+        </div>
+      </div>
+
+      <div class="room-card">
+        <img src="assets/img/room/4.webp" alt="Family Suite" />
+        <div class="room-overlay">
+          <h3>Family Suite</h3>
+          <p>Spacious room for a peaceful family retreat.</p>
+          <span class="price">$300 / Night</span>
+          <a href="#" class="btn-book">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Room Section End -->
+  <!-- Our Services Section Start -->
+  <div class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Services</h2>
+        <p>Elegant, Comfortable, and Immersed in Nature</p>
+      </div>
+      <div class="row gy-4 align-items-stretch">
+        <!-- Left Column -->
+        <div class="col-lg-4 d-flex flex-column gap-4">
+          <div class="single-service shadow-sm">
+            <div class="icon-box"><i class="fa-solid fa-spa"></i></div>
+            <div class="service-content">
+              <h5>Spa & Wellness</h5>
+              <p>Unwind with signature massages and relaxing treatments.</p>
+            </div>
+          </div>
+          <div class="single-service shadow-sm">
+            <div class="icon-box"><i class="fa-solid fa-utensils"></i></div>
+            <div class="service-content">
+              <h5>Fine Dining</h5>
+              <p>Delight in gourmet dishes and locally inspired flavors.</p>
+            </div>
+          </div>
+          <div class="single-service shadow-sm">
+            <div class="icon-box"><i class="fa-solid fa-person-swimming"></i></div>
+            <div class="service-content">
+              <h5>Infinity Pool</h5>
+              <p>Swim with views of lush hills and peaceful skies.</p>
+            </div>
+          </div>
+          <div class="single-service shadow-sm">
+            <div class="icon-box"><i class="fa-solid fa-dumbbell"></i></div>
+            <div class="service-content">
+              <h5>Fitness Studio</h5>
+              <p>Stay fit with modern equipment in a scenic environment.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Image -->
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="services-img h-100">
+            <img src="assets/img/s.webp" class="img-fluid h-100 w-100 object-fit-cover rounded shadow-lg"
+              alt="Resort Services Image">
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-lg-4 d-flex flex-column gap-4">
+          <div class="single-service shadow-sm">
+            <div class="icon-box"><i class="fa-solid fa-tree"></i></div>
+            <div class="service-content">
+              <h5>Nature Walks</h5>
+              <p>Explore lush surroundings on guided eco-trails.</p>
+            </div>
+          </div>
+          <div class="single-service shadow-sm">
+            <div class="icon-box"><i class="fa-solid fa-umbrella-beach"></i></div>
+            <div class="service-content">
+              <h5>Private Beach</h5>
+              <p>Secluded spots for relaxation and seaside memories.</p>
+            </div>
+          </div>
+          <div class="single-service shadow-sm">
+            <div class="icon-box"><i class="fa-solid fa-fire"></i></div>
+            <div class="service-content">
+              <h5>Bonfire Nights</h5>
+              <p>Evenings under the stars with warmth and music.</p>
+            </div>
+          </div>
+          <div class="single-service shadow-sm">
+            <div class="icon-box"><i class="fa-solid fa-wifi"></i></div>
+            <div class="service-content">
+              <h5>Free Wi-Fi</h5>
+              <p>Stay connected anywhere in the resort with ease.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Our Services Section End -->
+
+
+
+  <!-- Footer -->
+  <footer id="footer-section">
+    <div class="footer-top-company-logo">
+      <div class="row">
+        <div class="col-md-6 d-flex align-items-center"></div>
+        <div class="col-md-2">
+          <img src="assets/img/footer-logo/logo1.png" class="img-fluid" alt="" />
+        </div>
+        <div class="col-md-2">
+          <img src="assets/img/footer-logo/logo2.png" class="img-fluid" alt="" />
+        </div>
+        <div class="col-md-2">
+          <img src="assets/img/footer-logo/logo3.png" class="img-fluid" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-row-content">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer-contact-info-colum">
+              <a href="index.html">
+                <img src="assets/img/sarinda-logo.png" class="img-fluid footer-logo" alt="" />
+              </a>
+              <h6 class="footer-heading">Contact Info</h6>
+              <div class="contact-info">
+                <div class="single-contact-item">
+                  <p><i class="fa-solid fa-phone-flip"></i></p>
+                  <p>01211541545</p>
+                </div>
+                <div class="single-contact-item">
+                  <p><i class="fa-solid fa-envelope-open"></i></p>
+                  <p>example@gmail.com</p>
+                </div>
+                <div class="single-contact-item">
+                  <p><i class="fa-solid fa-location-dot"></i></p>
+                  <p>Mymensigh Sadar</p>
+                </div>
+                <div class="social-icons-footer">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <h6 class="footer-heading">Useful Links</h6>
+            <div class="footer-useful-links">
+              <li><a href="#">About Hotel</a></li>
+              <li><a href="#">Roome Suites</a></li>
+              <li><a href="#">Reservation</a></li>
+              <li><a href="#">News And Blogs</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h6 class="footer-heading">Gallery</h6>
+            <div class="footer-gallery">
+              <a href="assets/img/s1.jpg" target="_blank">
+                <img src="assets/img/s1.jpg" class="img-fluid footer-gallery-img" alt="Eco Vil Resort Gallery 1" />
+              </a>
+              <a href="assets/img/s2.jpg" target="_blank">
+                <img src="assets/img/s2.jpg" class="img-fluid footer-gallery-img" alt="Eco Vil Resort Gallery 2" />
+              </a>
+              <a href="assets/img/s3.jpg" target="_blank">
+                <img src="assets/img/s3.jpg" class="img-fluid footer-gallery-img" alt="Eco Vil Resort Gallery 3" />
+              </a>
+              <a href="assets/img/s4.jpg" target="_blank">
+                <img src="assets/img/s4.jpg" class="img-fluid footer-gallery-img" alt="Eco Vil Resort Gallery 4" />
+              </a>
+              <a href="assets/img/s1.jpg" target="_blank">
+                <img src="assets/img/s1.jpg" class="img-fluid footer-gallery-img" alt="Eco Vil Resort Gallery 5" />
+              </a>
+              <a href="assets/img/s2.jpg" target="_blank">
+                <img src="assets/img/s2.jpg" class="img-fluid footer-gallery-img" alt="Eco Vil Resort Gallery 6" />
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <h6 class="footer-heading">NEWSLETTER</h6>
+            <div class="newsletter-form">
+              <p>Subscribe our Newsletter</p>
+              <input type="email" class="input-email" placeholder="Enter Email" />
+              <a href="#" type="submit" class="my-btn my-btn-primary">
+                Submit
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
+  <div class="copyright-text text-center py-3 text-white">
+    <p>&copy; 2025 , Eco Vil. All Rights Reserved. Developed by <a href="https://www.freelanceit.com.bd/">Freelance
+        IT</a></p>
+  </div>
+
+
+  <!-- scroll to top -->
+  <div class="scroll-top">
+    <a href="#" class="scroll-top-icon">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+  </div>
+
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/all.min.js"></script>
   <script src="assets/js/heroSlider.js"></script>
+  <script src="assets/js/scrollTop.js"></script>
+  <!-- About Counter JS -->
+  <script src="assets/js/counter.js"></script>
 
   <!-- Custom Script -->
   <script src="assets/js/script.js"></script>
@@ -111,6 +463,13 @@
 
   <!-- typed js -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+  <!-- Typed JS -->
   <script>
     var typed = new Typed("#typed-text", {
       strings: [
@@ -135,6 +494,18 @@
     });
 
   </script>
+
+
+  <!-- reservation -->
+  <script>
+    document.querySelector(".reservation-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thank you! Your reservation request has been submitted.");
+      this.reset();
+    });
+  </script>
+
+
 </body>
 
 </html>
