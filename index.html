@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Welcome to Sarinda Sobari Resort - your perfect destination for luxury stays, fine dining, and scenic experiences." />
+  <title>Sarinda Sobari Resort</title>
+  <!-- Bootstrap Css -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome Css -->
+  <link rel="stylesheet" href="assets/css/all.min.css" />
+  <!-- Custom Style Css -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="main-navbar" id="mainNavbar">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/sarinda-logo.png" height="65px" alt="Sarinda logo">t</a>
+        <button class="navbar-toggler" type="button" onclick="toggleMobileMenu()">
+          <i class="fas fa-bars text-white fs-3"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Rooms</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Deluxe</a></li>
+                <li><a class="dropdown-item" href="#">Family Suite</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Facilities</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-sidebar">
+          <button class="close-btn" onclick="toggleMobileMenu()"><i class="fas fa-times"></i></button>
+          <ul class="navbar-nav flex-column p-4">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" onclick="toggleDropdown(event)">Rooms</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Deluxe</a></li>
+                <li><a class="dropdown-item" href="#">Family Suite</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Facilities</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero-slider">
+    <div class="slide active slide-image-scale" style="background-image: url('assets/img/slider/s1.jpg');"></div>
+    <div class="slide slide-image-scale" style="background-image: url('assets/img/slider/s5.jpg');"></div>
+    <div class="slide slide-image-scale" style="background-image: url('assets/img/slider/s6.jpg');"></div>
+
+    <div class="slider-arrow arrow-left" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></div>
+    <div class="slider-arrow arrow-right" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></div>
+
+
+    <!-- <div class="hero-content">
+      <h1>Relax. Refresh. Reconnect.</h1>
+      <p>Take a deep breath, let go of stress, and step into a world of relaxation. At Sarinda Sobari Resort, we invite
+        you to reconnect with nature, yourself, and your loved ones in pure comfort and peace.</p>
+      <a href="#" class="btn">See Our Packages</a>
+    </div> -->
+    <div class="hero-content">
+      <h1><span id="typed-text"></span></h1>
+      <p>Surrounded by lush landscapes and tranquil waters, Sarinda Sobari Resort offers a perfect blend of eco-luxury
+        and warm hospitality. Experience serenity like never before — every moment here is a memory in the making.</p>
+      <a href="#" class="sarinda-btn sarinda-btn-primary">Plan Your Visit</a>
+    </div>
+
+  </header>
+  <!-- Header End -->
+
+  <section class="py-5">
+    <div class="container">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora debitis repellat architecto adipisci...
+      </p>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">&copy; 2025 Sarinda Sobari Resort. All Rights Reserved.</p>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/all.min.js"></script>
+  <script src="assets/js/heroSlider.js"></script>
+
+  <!-- Custom Script -->
+  <script src="assets/js/script.js"></script>
+
+
+  <!-- typed js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed("#typed-text", {
+      strings: [
+        "Nature, Luxury, and You",
+        "Discover Peace in Every Corner",
+        "Escape to Tranquility",
+        "Your Perfect Getaway Awaits",
+        "Experience Sarinda Sobari Resort",
+        "Welcome to Paradise",
+        "Your Dream Getaway Awaits",
+        "Experience Luxury in Every Detail",
+        "Relax. Refresh. Reconnect.",
+        "Nature, Luxury, and You",
+      ],
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 2000,
+      loop: true,
+      showCursor: true,
+      cursorChar: "|",
+      autoInsertCss: true,
+    });
+
+  </script>
+</body>
+
+</html>
