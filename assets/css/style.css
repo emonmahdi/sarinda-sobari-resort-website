@@ -236,7 +236,7 @@ a:hover {
 }
 
 .hero-content h1 {
-  font-size: 35px;
+  font-size: 45px;
   font-weight: 800;
   margin-bottom: 1rem;
   letter-spacing: 0.1em;
@@ -314,13 +314,30 @@ footer {
 Reservation Section Start
 ---------------------------------- */
 .reservation-bar {
-  background: var(--btn-primary-color);
-  /* backdrop-filter: blur(12px); */
-  /* border-radius: 15px; */
+  background: url("/assets/img/white-waves.webp") repeat;
+  background-size: auto; /* Don't stretch, keep original size for pattern */
+  background-position: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  margin-top: -00px;
+  margin-top: 0px;
   z-index: 10;
   padding: 20px 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Optional media query for responsiveness */
+@media (max-width: 768px) {
+  .reservation-bar {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
 }
 
 .reservation-form .form-label {
@@ -357,7 +374,7 @@ Reservation Section Start
 About Us Section Start
 ---------------------------------- */
 .about-us-section {
-  background: linear-gradient(to right, #f5f7fa, #e3f2fd);
+  background: #d0fce1;
   perspective: 1200px;
 }
 
@@ -389,8 +406,8 @@ About Us Section Start
 }
 
 .about-title {
-  font-size: 2rem;
-  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: bold;
   color: #003f6e;
 }
 
@@ -448,6 +465,7 @@ Room Section start
 .our-rooms-section {
   padding: 40px 0px;
   background-color: #f9f9f9;
+  overflow: hidden;
 }
 
 .section-header {
@@ -572,6 +590,7 @@ Our Services Section start
 ===========================*/
 .services-section {
   padding: 40px 0;
+  background-color: #d0fce1;
   overflow: hidden;
 }
 /* Section Styling */
@@ -657,6 +676,78 @@ Our Services Section start
 }
 
 /* ========================
+Testimonial Section start
+===========================*/
+/* ========================
+Blog Section start
+===========================*/
+.blog-section {
+  padding: 40px 0px;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+.single-blog {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+}
+
+.single-blog:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-img {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.single-blog:hover .blog-img img {
+  transform: scale(1.05);
+}
+
+.blog-title-desc h4 a {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.blog-title-desc h4 a:hover {
+  color: var(--btn-primary-color);
+}
+
+.blog-title-desc p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.date-author {
+  font-size: 0.85rem;
+}
+
+.btn-blog {
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.btn-blog:hover {
+  background-color: var(--btn-primary-color);
+}
+
+/* ========================
 Subcribe Section start
 ===========================*/
 .subscribe-section {
@@ -706,10 +797,14 @@ Subcribe Section start
   padding: 10px 30px;
 }
 .btn-subscribe {
-  background-color: var(--btn-primary-color);
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  color: #fff;
 }
 .btn-subscribe:hover {
-  background-color: var(--primary-color);
+  background-color: var(--btn-primary-color);
+  border: 2px solid var(--btn-primary-color);
+  color: #000;
 }
 
 @media (max-width: 576px) {
@@ -734,7 +829,7 @@ Footer Section start
   background-color: #1e1e1e;
 }
 .footer-top-company-logo {
-  background-color: var(--primary-color);
+  background-color: #ddd;
   /* padding: 30px 20px;
   width: 80%;
   margin:0 auto; */
@@ -935,30 +1030,27 @@ Footer Section start
   }
 }
 
-.newsletter-form {
-  width: 100%;
-}
-.newsletter-form p {
-  color: #acacac;
-  font-size: 14px;
-}
-.newsletter-form a,
-.newsletter-form input {
-  width: 100%;
-  display: inline-block;
-  margin: 10px 0;
-}
-.newsletter-form .input-email {
-  padding: 10px 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 15px;
-}
-.newsletter-form .my-btn-primary {
-  color: #000;
-}
-.newsletter-form .my-btn-primary:hover {
+.footer-heading {
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
   color: #fff;
+}
+
+.footer-heading + ul li {
+  margin-bottom: 8px;
+}
+
+.footer-heading + ul li a:hover {
+  text-decoration: underline;
+}
+
+.input-email {
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
 }
 
 /* ========================
