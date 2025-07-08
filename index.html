@@ -218,12 +218,12 @@
         data-aos-duration="800">
         <img src="assets/img/room/1.webp" alt="Deluxe Villa" class="img-fluid w-100 h-100 object-fit-cover" />
         <div
-          class="room-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3 text-white"
+          class="room-overlay active-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-end p-3 text-white"
           style="background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);">
           <h3>Deluxe Villa</h3>
           <p>Perfect for couples with private balcony and lush garden view.</p>
           <span class="price fw-bold">$180 / Night</span>
-          <a href="#" class="btn btn-warning mt-2">Book Now</a>
+          <a href="#" class="btn btn-book mt-2">Book Now</a>
         </div>
       </div>
 
@@ -237,7 +237,7 @@
           <h3>Lake View Suite</h3>
           <p>Wake up to the serene beauty of lake and sky.</p>
           <span class="price fw-bold">$210 / Night</span>
-          <a href="#" class="btn btn-warning mt-2">Book Now</a>
+          <a href="#" class="btn btn-book mt-2">Book Now</a>
         </div>
       </div>
 
@@ -251,7 +251,7 @@
           <h3>Hill Cottage</h3>
           <p>Private hill-side cottages with panoramic views.</p>
           <span class="price fw-bold">$250 / Night</span>
-          <a href="#" class="btn btn-warning mt-2">Book Now</a>
+          <a href="#" class="btn btn-book mt-2">Book Now</a>
         </div>
       </div>
 
@@ -265,7 +265,7 @@
           <h3>Family Suite</h3>
           <p>Spacious room for a peaceful family retreat.</p>
           <span class="price fw-bold">$300 / Night</span>
-          <a href="#" class="btn btn-warning mt-2">Book Now</a>
+          <a href="#" class="btn btn-book mt-2">Book Now</a>
         </div>
       </div>
     </div>
@@ -419,9 +419,10 @@
         <h2>Our Blog</h2>
         <p>Elegant, Comfortable, and Immersed in Nature</p>
       </div>
+      <!-- Blog Cards with AOS Animations -->
       <div class="row g-4 mb-5">
         <!-- Blog Card 1 -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
           <div class="single-blog shadow p-3 rounded h-100">
             <div class="blog-img">
               <img src="assets/img/room/1.webp" alt="Luxury Villa" class="img-fluid" />
@@ -440,7 +441,7 @@
         </div>
 
         <!-- Blog Card 2 -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
           <div class="single-blog shadow p-3 rounded h-100">
             <div class="blog-img">
               <img src="assets/img/room/2.webp" alt="Dining Blog" class="img-fluid" />
@@ -459,7 +460,7 @@
         </div>
 
         <!-- Blog Card 3 -->
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
           <div class="single-blog shadow p-3 rounded h-100">
             <div class="blog-img">
               <img src="assets/img/room/3.webp" alt="Adventure Blog" class="img-fluid" />
@@ -477,6 +478,7 @@
           </div>
         </div>
       </div>
+
       <!-- <div class="row">
         <div class="col-md-4">
           <div class="single-blog shadow p-3 rounded mb-3">
@@ -498,6 +500,71 @@
     </div>
   </section>
   <!-- Blog Section End -->
+
+  <!-- Food Section Start -->
+  <!-- Restaurant Food Menu Section -->
+  <!-- Restaurant Food Menu Section -->
+  <section class="restaurant-section py-5" style="background-color: #fffaf5;">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
+        <h2>Our Signature Dishes</h2>
+        <p>aste the heart of Sarinda Sobari</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Food Item 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="food-card shadow-sm rounded overflow-hidden h-100">
+            <img src="assets/img/food/f1.jpg" alt="Seafood Platter" class="img-fluid food-img" />
+            <div class="food-info p-3 d-flex flex-column justify-content-between h-100">
+              <h5 class="food-name text-dark">Grilled Seafood Platter</h5>
+              <p class="text-muted small">A delightful mix of fresh prawns, fish, and calamari grilled with tropical
+                herbs.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="text-success fw-bold">$22.50</span>
+                <button class="btn btn-order">Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Item 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="food-card shadow-sm rounded overflow-hidden h-100">
+            <img src="assets/img/food/f2.jpg" alt="Bamboo Biryani" class="img-fluid food-img" />
+            <div class="food-info p-3 d-flex flex-column justify-content-between h-100">
+              <h5 class="food-name text-dark">Bamboo Chicken Biryani</h5>
+              <p class="text-muted small">Authentic biryani slow-cooked in bamboo, a specialty of our forest-inspired
+                kitchen.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="text-success fw-bold">$16.00</span>
+                <button class="btn btn-order">Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Item 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="food-card shadow-sm rounded overflow-hidden h-100">
+            <img src="assets/img/food/f3.jpg" alt="Tropical Dessert" class="img-fluid food-img" />
+            <div class="food-info p-3 d-flex flex-column justify-content-between h-100">
+              <h5 class="food-name text-dark">Tropical Fruit Delight</h5>
+              <p class="text-muted small">A refreshing fusion of mango, coconut, and passion fruit — chilled to
+                perfection.</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="text-success fw-bold">$9.50</span>
+                <button class="btn btn-order">Order Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Food Section End -->
 
 
 
