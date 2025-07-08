@@ -85,7 +85,7 @@
     <div class="hero-content">
       <h1><span id="typed-text"></span></h1>
       <p>Surrounded by lush landscapes and tranquil waters, Sarinda Sobari Resort offers a perfect blend of eco-luxury
-        and warm hospitality. Experience serenity like never before — every moment here is a memory in the making.</p>
+        and warm hospitality. </p>
       <a href="#" class="sarinda-btn sarinda-btn-primary">Plan Your Visit</a>
     </div>
 
@@ -256,37 +256,39 @@
   </section>
   <!-- Room Section End -->
   <!-- Our Services Section Start -->
-  <div class="services-section">
+  <div class="services-section py-5">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
         <h2>Our Services</h2>
         <p>Elegant, Comfortable, and Immersed in Nature</p>
       </div>
+
       <div class="row gy-4 align-items-stretch">
+
         <!-- Left Column -->
-        <div class="col-lg-4 d-flex flex-column gap-4">
-          <div class="single-service shadow-sm">
+        <div class="col-lg-4 d-flex flex-column gap-4" data-aos="fade-right" data-aos-duration="1200">
+          <div class="single-service shadow-sm p-3 rounded bg-white">
             <div class="icon-box"><i class="fa-solid fa-spa"></i></div>
             <div class="service-content">
               <h5>Spa & Wellness</h5>
               <p>Unwind with signature massages and relaxing treatments.</p>
             </div>
           </div>
-          <div class="single-service shadow-sm">
+          <div class="single-service shadow-sm p-3 rounded bg-white">
             <div class="icon-box"><i class="fa-solid fa-utensils"></i></div>
             <div class="service-content">
               <h5>Fine Dining</h5>
               <p>Delight in gourmet dishes and locally inspired flavors.</p>
             </div>
           </div>
-          <div class="single-service shadow-sm">
+          <div class="single-service shadow-sm p-3 rounded bg-white">
             <div class="icon-box"><i class="fa-solid fa-person-swimming"></i></div>
             <div class="service-content">
               <h5>Infinity Pool</h5>
               <p>Swim with views of lush hills and peaceful skies.</p>
             </div>
           </div>
-          <div class="single-service shadow-sm">
+          <div class="single-service shadow-sm p-3 rounded bg-white">
             <div class="icon-box"><i class="fa-solid fa-dumbbell"></i></div>
             <div class="service-content">
               <h5>Fitness Studio</h5>
@@ -296,7 +298,7 @@
         </div>
 
         <!-- Center Image -->
-        <div class="col-lg-4 d-none d-lg-block">
+        <div class="col-lg-4 d-none d-lg-block" data-aos="zoom-in" data-aos-duration="1200">
           <div class="services-img h-100">
             <img src="assets/img/s.webp" class="img-fluid h-100 w-100 object-fit-cover rounded shadow-lg"
               alt="Resort Services Image">
@@ -304,29 +306,29 @@
         </div>
 
         <!-- Right Column -->
-        <div class="col-lg-4 d-flex flex-column gap-4">
-          <div class="single-service shadow-sm">
+        <div class="col-lg-4 d-flex flex-column gap-4" data-aos="fade-left" data-aos-duration="1200">
+          <div class="single-service shadow-sm p-3 rounded bg-white">
             <div class="icon-box"><i class="fa-solid fa-tree"></i></div>
             <div class="service-content">
               <h5>Nature Walks</h5>
               <p>Explore lush surroundings on guided eco-trails.</p>
             </div>
           </div>
-          <div class="single-service shadow-sm">
+          <div class="single-service shadow-sm p-3 rounded bg-white">
             <div class="icon-box"><i class="fa-solid fa-umbrella-beach"></i></div>
             <div class="service-content">
               <h5>Private Beach</h5>
               <p>Secluded spots for relaxation and seaside memories.</p>
             </div>
           </div>
-          <div class="single-service shadow-sm">
+          <div class="single-service shadow-sm p-3 rounded bg-white">
             <div class="icon-box"><i class="fa-solid fa-fire"></i></div>
             <div class="service-content">
               <h5>Bonfire Nights</h5>
               <p>Evenings under the stars with warmth and music.</p>
             </div>
           </div>
-          <div class="single-service shadow-sm">
+          <div class="single-service shadow-sm p-3 rounded bg-white">
             <div class="icon-box"><i class="fa-solid fa-wifi"></i></div>
             <div class="service-content">
               <h5>Free Wi-Fi</h5>
@@ -334,10 +336,28 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </div>
+
   <!-- Our Services Section End -->
+  <!-- Subscribe Section -->
+  <section class="subscribe-section">
+    <div class="subscribe-content text-white" data-aos="fade-up" data-aos-duration="1000">
+      <h2 data-aos="fade-down" data-aos-delay="200">Stay Connected with <span class="span-highlight-text">Sarinda Sobari
+          Resort</span></h2>
+      <p data-aos="fade-up" data-aos-delay="400">
+        Subscribe to get exclusive offers, updates, and relaxing getaway tips directly to your inbox.
+      </p>
+      <form class="subscribe-form d-flex justify-content-center gap-2 flex-wrap"
+        onsubmit="event.preventDefault(); alert('Subscribed!');" data-aos="zoom-in-up" data-aos-delay="600">
+        <input type="email" class="form-control w-50" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-subscribe">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
 
 
 

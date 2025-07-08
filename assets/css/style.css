@@ -248,6 +248,25 @@ a:hover {
   margin-bottom: 2rem;
   font-weight: 300;
 }
+@media (max-width: 450px) {
+  .hero-content {
+    width: 80%;
+  }
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+  .sarinda-btn {
+    padding: 14px 20px;
+    font-size: 12px;
+  }
+  .navbar-brand img {
+    height: 45px !important;
+  }
+}
 
 /* .hero-content .btn {
   background: var(--btn-primary-color);
@@ -497,7 +516,7 @@ Room Section start
   height: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
   color: #fff;
-  padding: 20px;
+  padding: 80px;
   text-align: center;
   opacity: 0;
   transform: translateY(100%);
@@ -637,6 +656,77 @@ Our Services Section start
   }
 }
 
+/* ========================
+Subcribe Section start
+===========================*/
+.subscribe-section {
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+    center center/cover no-repeat;
+  padding: 100px 20px;
+  color: white;
+}
+
+.subscribe-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Overlay */
+  z-index: 1;
+}
+
+.subscribe-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+}
+.span-highlight-text {
+  color: var(--btn-primary-color);
+}
+.subscribe-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subscribe-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.subscribe-form input[type="email"] {
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.subscribe-form button {
+  border-radius: 30px;
+  padding: 10px 30px;
+}
+.btn-subscribe {
+  background-color: var(--btn-primary-color);
+}
+.btn-subscribe:hover {
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 576px) {
+  .subscribe-content h2 {
+    font-size: 2rem;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .subscribe-form input,
+  .subscribe-form button {
+    width: 100%;
+  }
+}
 /* ========================
 Footer Section start
 ===========================*/
