@@ -1167,3 +1167,86 @@ Scroll Top Start
 /* ===========================================
 Scroll Top End
 ==============================================*/
+/* ===========================================
+About Page Style
+==============================================*/
+/* .single-page-top-header {
+  background: url("/assets/img/gallery/banner-image-2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  position: relative;
+}
+
+.single-page-top-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;  
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.single-page-top-header * {
+  position: relative;
+  z-index: 2;
+} */
+.single-page-top-header {
+  background: url("/assets/img/gallery/banner-image-2.jpg") center center /
+    cover no-repeat;
+  height: 350px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.single-page-top-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.breadcrumb-menu {
+  position: relative;
+  z-index: 2;
+  padding-left: 40px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.breadcrumb-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+  font-size: 1.1rem;
+  align-items: center;
+}
+
+.breadcrumb-menu ul li {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.breadcrumb-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-menu ul li a:hover {
+  color: #f0c040;
+}

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Welcome to Sarinda Sobari Resort - your perfect destination for luxury stays, fine dining, and scenic experiences." />
+    <title>Gallery || Sarinda Sobari Resort</title>
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Aos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <!-- Font Awesome Css -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- Custom Style Css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        .image-gallery {
+            padding: 50px 20px;
+            background-color: #fff;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .popup-icon {
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            flex-direction: column;
+        }
+
+        .lightbox-img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #fff;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        .nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .nav.left {
+            left: 30px;
+        }
+
+        .nav.right {
+            right: 30px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .popup-icon {
+                font-size: 1.5rem;
+            }
+
+            .close-btn,
+            .nav {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="main-navbar" id="mainNavbar">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/sarinda-logo.png" height="65px" alt="Sarinda logo"></a>
+                <button class="navbar-toggler" type="button" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-white fs-3"></i>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="rooms.html" role="button"
+                                data-bs-toggle="dropdown">Rooms</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="rooms.html">Deluxe</a></li>
+                                <li><a class="dropdown-item" href="rooms.html">Family Suite</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Facilities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="mobile-sidebar">
+                    <button class="close-btn" onclick="toggleMobileMenu()"><i class="fas fa-times"></i></button>
+                    <ul class="navbar-nav flex-column p-4">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="rooms.html"
+                                onclick="toggleDropdown(event)">Rooms</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="rooms.html">Deluxe</a></li>
+                                <li><a class="dropdown-item" href="rooms.html">Family Suite</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Facilities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="single-page-top-header">
+        <div class="breadcrumb-menu">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><i class="fas fa-info-circle"></i> Gallery</li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ✅ Gallery Section -->
+    <section class="image-gallery">
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="assets/img/gallery/3.jpg" alt="Image 1">
+                <div class="overlay">
+                    <span class="popup-icon" onclick="openLightbox(0)">
+                        <i class="fas fa-search-plus"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/img/gallery/2.jpg" alt="Image 2">
+                <div class="overlay">
+                    <span class="popup-icon" onclick="openLightbox(1)">
+                        <i class="fas fa-search-plus"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/img/gallery/1.jpg" alt="Image 3">
+                <div class="overlay">
+                    <span class="popup-icon" onclick="openLightbox(2)">
+                        <i class="fas fa-search-plus"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/img/gallery/3.jpg" alt="Image 1">
+                <div class="overlay">
+                    <span class="popup-icon" onclick="openLightbox(0)">
+                        <i class="fas fa-search-plus"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/img/gallery/2.jpg" alt="Image 2">
+                <div class="overlay">
+                    <span class="popup-icon" onclick="openLightbox(1)">
+                        <i class="fas fa-search-plus"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="assets/img/gallery/1.jpg" alt="Image 3">
+                <div class="overlay">
+                    <span class="popup-icon" onclick="openLightbox(2)">
+                        <i class="fas fa-search-plus"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Full View">
+        <span class="nav left" onclick="changeImage(-1)"><i class="fas fa-chevron-left"></i></span>
+        <span class="nav right" onclick="changeImage(1)"><i class="fas fa-chevron-right"></i></span>
+    </div>
+
+
+    <!-- Footer -->
+    <footer id="footer-section">
+        <div class="footer-top-company-logo">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center"></div>
+                <div class="col-md-2">
+                    <img src="assets/img/footer-logo/logo1.png" class="img-fluid" alt="" />
+                </div>
+                <div class="col-md-2">
+                    <img src="assets/img/footer-logo/logo2.png" class="img-fluid" alt="" />
+                </div>
+                <div class="col-md-2">
+                    <img src="assets/img/footer-logo/logo3.png" class="img-fluid" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="footer-row-content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-contact-info-colum">
+                            <a href="index.html">
+                                <img src="assets/img/sarinda-logo.png" class="img-fluid footer-logo" alt="" />
+                            </a>
+                            <h6 class="footer-heading">Contact Info</h6>
+                            <div class="contact-info">
+                                <div class="single-contact-item">
+                                    <p><i class="fa-solid fa-phone-flip"></i></p>
+                                    <p>01211541545</p>
+                                </div>
+                                <div class="single-contact-item">
+                                    <p><i class="fa-solid fa-envelope-open"></i></p>
+                                    <p>example@gmail.com</p>
+                                </div>
+                                <div class="single-contact-item">
+                                    <p><i class="fa-solid fa-location-dot"></i></p>
+                                    <p>Mymensigh Sadar</p>
+                                </div>
+                                <div class="social-icons-footer">
+                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <h6 class="footer-heading">Useful Links</h6>
+                        <div class="footer-useful-links">
+                            <li><a href="#">About Hotel</a></li>
+                            <li><a href="#">Roome Suites</a></li>
+                            <li><a href="#">Reservation</a></li>
+                            <li><a href="#">News And Blogs</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="footer-heading">Gallery</h6>
+                        <div class="footer-gallery">
+                            <a href="assets/img/s1.jpg" target="_blank">
+                                <img src="assets/img/s1.jpg" class="img-fluid footer-gallery-img"
+                                    alt="Eco Vil Resort Gallery 1" />
+                            </a>
+                            <a href="assets/img/s2.jpg" target="_blank">
+                                <img src="assets/img/s2.jpg" class="img-fluid footer-gallery-img"
+                                    alt="Eco Vil Resort Gallery 2" />
+                            </a>
+                            <a href="assets/img/s3.jpg" target="_blank">
+                                <img src="assets/img/s3.jpg" class="img-fluid footer-gallery-img"
+                                    alt="Eco Vil Resort Gallery 3" />
+                            </a>
+                            <a href="assets/img/s4.jpg" target="_blank">
+                                <img src="assets/img/s4.jpg" class="img-fluid footer-gallery-img"
+                                    alt="Eco Vil Resort Gallery 4" />
+                            </a>
+                            <a href="assets/img/s1.jpg" target="_blank">
+                                <img src="assets/img/s1.jpg" class="img-fluid footer-gallery-img"
+                                    alt="Eco Vil Resort Gallery 5" />
+                            </a>
+                            <a href="assets/img/s2.jpg" target="_blank">
+                                <img src="assets/img/s2.jpg" class="img-fluid footer-gallery-img"
+                                    alt="Eco Vil Resort Gallery 6" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <h6 class="footer-heading">RESORT HIGHLIGHTS</h6>
+                        <ul class="list-unstyled">
+                            <li class="text-white"><i class="fa-solid fa-check text-warning  me-2"></i>Spa & Wellness
+                            </li>
+                            <li class="text-white"><i class="fa-solid fa-check text-warning me-2"></i>Infinity Pool</li>
+                            <li class="text-white"><i class="fa-solid fa-check text-warning me-2"></i>Private Beach</li>
+                            <li class="text-white"><i class="fa-solid fa-check text-warning me-2"></i>Nature Walks</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright-text text-center py-3 text-white">
+        <p>&copy; 2025 , Sarinda Sobari Resort. All Rights Reserved. Developed by <a
+                href="https://www.freelanceit.com.bd/" style="color:chartreuse; text-decoration: underline;"
+                target="_blank">Freelance
+                IT</a></p>
+    </div>
+
+
+    <!-- scroll to top -->
+    <div class="scroll-top">
+        <a href="#" class="scroll-top-icon">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/heroSlider.js"></script>
+    <script src="assets/js/scrollTop.js"></script>
+    <!-- About Counter JS -->
+    <script src="assets/js/counter.js"></script>
+
+    <!-- Custom Script -->
+    <script src="assets/js/script.js"></script>
+
+
+    <!-- typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+
+
+    <!-- ✅ JavaScript -->
+    <script>
+        const imageSources = [
+            "assets/img/gallery/3.jpg",
+            "assets/img/gallery/2.jpg",
+            "assets/img/gallery/1.jpg",
+            "assets/img/gallery/3.jpg",
+            "assets/img/gallery/2.jpg",
+            "assets/img/gallery/1.jpg"
+        ];
+
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            document.getElementById("lightbox-img").src = imageSources[currentIndex];
+            document.getElementById("lightbox").style.display = "flex";
+        }
+
+        function closeLightbox() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = imageSources.length - 1;
+            if (currentIndex >= imageSources.length) currentIndex = 0;
+            document.getElementById("lightbox-img").src = imageSources[currentIndex];
+        }
+    </script>
+
+</body>
+
+</html>
