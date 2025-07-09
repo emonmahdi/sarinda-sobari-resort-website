@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="Welcome to Sarinda Sobari Resort - your perfect destination for luxury stays, fine dining, and scenic experiences." />
-    <title>Gallery || Sarinda Sobari Resort</title>
+    <title>Contact || Sarinda Sobari Resort</title>
     <!-- Bootstrap Css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Aos -->
@@ -18,122 +18,6 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <style>
-        .image-gallery {
-            padding: 50px 20px;
-            background-color: #fff;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            opacity: 0;
-            transition: 0.4s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .gallery-item:hover .overlay {
-            opacity: 1;
-        }
-
-        .popup-icon {
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-        }
-
-        /* Lightbox */
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            flex-direction: column;
-        }
-
-        .lightbox-img {
-            max-width: 90%;
-            max-height: 80%;
-            border-radius: 10px;
-            box-shadow: 0 0 20px #fff;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #fff;
-            font-size: 2rem;
-            cursor: pointer;
-        }
-
-        .nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2rem;
-            color: white;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .nav.left {
-            left: 30px;
-        }
-
-        .nav.right {
-            right: 30px;
-        }
-
-        @media screen and (max-width: 600px) {
-            .popup-icon {
-                font-size: 1.5rem;
-            }
-
-            .close-btn,
-            .nav {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -192,80 +76,89 @@
         <div class="breadcrumb-menu">
             <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><i class="fas fa-info-circle"></i> Gallery</li>
+                <li><i class="fas fa-info-circle"></i> Contact</li>
             </ul>
         </div>
     </header>
 
-    <!-- ✅ Gallery Section -->
-    <section class="image-gallery">
-        <div class="section-header text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
-            <h2>Our Gallery </h2>
-            <p>A sanctuary of comfort, elegance, and natural harmony in the heart of nature.</p>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="assets/img/gallery/3.jpg" alt="Image 1">
-                <div class="overlay">
-                    <span class="popup-icon" onclick="openLightbox(0)">
-                        <i class="fas fa-search-plus"></i>
-                    </span>
-                </div>
-            </div>
+    <!-- Header End -->
 
-            <div class="gallery-item">
-                <img src="assets/img/gallery/2.jpg" alt="Image 2">
-                <div class="overlay">
-                    <span class="popup-icon" onclick="openLightbox(1)">
-                        <i class="fas fa-search-plus"></i>
-                    </span>
-                </div>
-            </div>
+    <!-- Contact Section Start -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- Contact Information -->
+                <div class="col-lg-6">
+                    <h5 class="fw-bold mb-2">Contact Information</h5>
+                    <p class="text-muted mb-4">Fill the form below or write us. We will help you as soon as
+                        possible.</p>
 
-            <div class="gallery-item">
-                <img src="assets/img/gallery/1.jpg" alt="Image 3">
-                <div class="overlay">
-                    <span class="popup-icon" onclick="openLightbox(2)">
-                        <i class="fas fa-search-plus"></i>
-                    </span>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="assets/img/gallery/3.jpg" alt="Image 1">
-                <div class="overlay">
-                    <span class="popup-icon" onclick="openLightbox(0)">
-                        <i class="fas fa-search-plus"></i>
-                    </span>
-                </div>
-            </div>
+                    <div class="mb-3 p-4 rounded bg-white d-flex align-items-start gap-3 shadow-sm">
+                        <i class="fa-solid fa-phone fa-2x"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1">Phone</h6>
+                            <p class="mb-0">01616-853902</p>
+                        </div>
+                    </div>
 
-            <div class="gallery-item">
-                <img src="assets/img/gallery/2.jpg" alt="Image 2">
-                <div class="overlay">
-                    <span class="popup-icon" onclick="openLightbox(1)">
-                        <i class="fas fa-search-plus"></i>
-                    </span>
-                </div>
-            </div>
+                    <div class="mb-3 p-4 rounded bg-white d-flex align-items-start gap-3 shadow-sm">
+                        <i class="fa-solid fa-envelope fa-2x"></i>
+                        <div>
+                            <h6 class="fw-bold mb-1">Email</h6>
+                            <p class="mb-0">marcofootwearbd@gmail.com</p>
+                        </div>
+                    </div>
 
-            <div class="gallery-item">
-                <img src="assets/img/gallery/1.jpg" alt="Image 3">
-                <div class="overlay">
-                    <span class="popup-icon" onclick="openLightbox(2)">
-                        <i class="fas fa-search-plus"></i>
-                    </span>
+                    <div class="p-4 rounded bg-white shadow-sm">
+                        <div class="d-flex align-items-start gap-3 mb-2">
+                            <i class="fa-solid fa-location-dot fa-2x"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Address</h6>
+                                <p class="mb-0"> ১ নং মহারাজা রোড, বড় মসজিদের পিছনের গেইট এর বিপরিত পার্শে,
+                                    ময়মনসিংহ।
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <iframe src="https://maps.google.com/maps?q=New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                width="100%" height="180" class="rounded border-0"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <h4 class="fw-bold mb-3 position-relative contact-title">Get In Touch</h4>
+                        <form id="contactForm" novalidate>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">First Name </label>
+                                <input type="text" class="form-control" id="name" placeholder="Demo Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address <span class="text-danger">*</span>
+                                </label>
+                                <input type="email" class="form-control" id="email" placeholder="info@quomodosoft.com"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject </label>
+                                <input type="text" class="form-control" id="subject" placeholder="Your Subject here"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message <span
+                                        class="text-danger">*</span></label>
+                                <textarea class="form-control" id="message" rows="4"
+                                    placeholder="Type your message here" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-contact w-100">Send Now</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- ✅ Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <span class="close-btn" onclick="closeLightbox()">&times;</span>
-        <img class="lightbox-img" id="lightbox-img" src="" alt="Full View">
-        <span class="nav left" onclick="changeImage(-1)"><i class="fas fa-chevron-left"></i></span>
-        <span class="nav right" onclick="changeImage(1)"><i class="fas fa-chevron-right"></i></span>
-    </div>
 
 
     <!-- Footer -->
@@ -405,37 +298,53 @@
         AOS.init({ duration: 1000, once: true });
     </script>
 
-
-    <!-- ✅ JavaScript -->
+    <!-- Typed JS -->
     <script>
-        const imageSources = [
-            "assets/img/gallery/3.jpg",
-            "assets/img/gallery/2.jpg",
-            "assets/img/gallery/1.jpg",
-            "assets/img/gallery/3.jpg",
-            "assets/img/gallery/2.jpg",
-            "assets/img/gallery/1.jpg"
-        ];
+        var typed = new Typed("#typed-text", {
+            strings: [
+                "Nature, Luxury, and You",
+                "Discover Peace in Every Corner",
+                "Escape to Tranquility",
+                "Your Perfect Getaway Awaits",
+                "Experience Sarinda Sobari Resort",
+                "Welcome to Paradise",
+                "Your Dream Getaway Awaits",
+                "Experience Luxury in Every Detail",
+                "Relax. Refresh. Reconnect.",
+                "Nature, Luxury, and You",
+            ],
+            typeSpeed: 60,
+            backSpeed: 40,
+            backDelay: 2000,
+            loop: true,
+            showCursor: true,
+            cursorChar: "|",
+            autoInsertCss: true,
+        });
 
-        let currentIndex = 0;
-
-        function openLightbox(index) {
-            currentIndex = index;
-            document.getElementById("lightbox-img").src = imageSources[currentIndex];
-            document.getElementById("lightbox").style.display = "flex";
-        }
-
-        function closeLightbox() {
-            document.getElementById("lightbox").style.display = "none";
-        }
-
-        function changeImage(direction) {
-            currentIndex += direction;
-            if (currentIndex < 0) currentIndex = imageSources.length - 1;
-            if (currentIndex >= imageSources.length) currentIndex = 0;
-            document.getElementById("lightbox-img").src = imageSources[currentIndex];
-        }
     </script>
+
+
+    <!-- reservation -->
+    <script>
+        document.querySelector(".reservation-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Thank you! Your reservation request has been submitted.");
+            this.reset();
+        });
+    </script>
+
+    <!-- Testimonial -->
+
+
+
+
+
+
+
+
+
+
 
 </body>
 

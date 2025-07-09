@@ -41,9 +41,9 @@
                 <li><a class="dropdown-item" href="rooms.html">Family Suite</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Facilities</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
 
@@ -60,9 +60,9 @@
                 <li><a class="dropdown-item" href="rooms.html">Family Suite</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Facilities</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -89,36 +89,30 @@
       <h1><span id="typed-text"></span></h1>
       <p>Surrounded by lush landscapes and tranquil waters, Sarinda Sobari Resort offers a perfect blend of eco-luxury
         and warm hospitality. </p>
-      <a href="#" class="sarinda-btn sarinda-btn-primary">Plan Your Visit</a>
-    </div>
-
-  </header>
-  <!-- Header End -->
-
-  <section class="reservation-bar py-4" data-aos="fade-up">
-    <div class="container">
+      <!-- <a href="#reservation-book" class="sarinda-btn sarinda-btn-primary">Explore More</a> -->
+      <button type="submit" class="btn btn-reserve mb-3">Explore More</button>
       <form class="row g-3 align-items-end justify-content-center reservation-form">
 
         <!-- Date -->
-        <div class="col-md-2 col-sm-6">
+        <div class="col-md-2 col-sm-6 mt-0 text-start">
           <label class="form-label">Date</label>
           <input type="date" class="form-control" required />
         </div>
 
         <!-- Time -->
-        <div class="col-md-2 col-sm-6">
+        <div class="col-md-2 col-sm-6 mt-0 text-start">
           <label class="form-label">Time</label>
           <input type="time" class="form-control" required />
         </div>
 
         <!-- Guests -->
-        <div class="col-md-2 col-sm-6">
+        <div class="col-md-2 col-sm-6 mt-0 text-start">
           <label class="form-label">Guests</label>
           <input type="number" class="form-control" min="1" value="2" required />
         </div>
 
         <!-- Room Type -->
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-3 col-sm-6 mt-0 text-start">
           <label class="form-label">Room Type</label>
           <select class="form-select" required>
             <option disabled selected>Select Room</option>
@@ -135,7 +129,51 @@
 
       </form>
     </div>
-  </section>
+
+  </header>
+  <!-- Header End -->
+
+  <!-- <section class="reservation-bar" id="reservation-book" data-aos="fade-up">
+    <div class="container">
+      <form class="row g-3 align-items-end justify-content-center reservation-form">
+
+       
+        <div class="col-md-2 col-sm-6">
+          <label class="form-label">Date</label>
+          <input type="date" class="form-control" required />
+        </div>
+
+        
+        <div class="col-md-2 col-sm-6">
+          <label class="form-label">Time</label>
+          <input type="time" class="form-control" required />
+        </div>
+
+        
+        <div class="col-md-2 col-sm-6">
+          <label class="form-label">Guests</label>
+          <input type="number" class="form-control" min="1" value="2" required />
+        </div>
+
+        
+        <div class="col-md-3 col-sm-6">
+          <label class="form-label">Room Type</label>
+          <select class="form-select" required>
+            <option disabled selected>Select Room</option>
+            <option>Deluxe Villa</option>
+            <option>Lake View Suite</option>
+            <option>Hill Cottage</option>
+          </select>
+        </div>
+
+         
+        <div class="col-md-2 col-sm-12 text-center">
+          <button type="submit" class="btn btn-reserve w-100">Reserve</button>
+        </div>
+
+      </form>
+    </div>
+  </section> -->
 
   <!-- About Section Start -->
   <section class="about-us-section py-5">
