@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Professional Masonry Gallery</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background: #f0f0f0;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Gallery item styling */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 0;
+            /* No bottom margin to remove vertical gaps */
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Overlay */
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+            align-items: center;
+        }
+
+        .overlay p {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0;
+            transform: translateY(30px);
+            transition: transform 0.4s ease;
+            text-align: center;
+        }
+
+        .gallery-item:hover .overlay p {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row" id="gallery">
+            <!-- JS will fill the gallery here -->
+        </div>
+    </div>
+
+    <!-- Masonry JS CDN -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <script>
+        const images = [
+            { src: "assets/img/gallery/new1.jpg", title: "Mountain View" },
+            { src: "assets/img/gallery/new2-683x1024.jpg", title: "Happy Dog" },
+            { src: "assets/img/gallery/new3.jpg", title: "City Lights" },
+            { src: "assets/img/gallery/new4-683x1024.jpg", title: "Lakeside View" },
+            { src: "assets/img/gallery/new5.jpg", title: "Vintage Road" },
+            { src: "assets/img/gallery/new6.jpg", title: "Forest Trail" },
+            { src: "assets/img/gallery/new7.jpg", title: "Sunset Drive" },
+            { src: "assets/img/gallery/new8.jpg", title: "Snow Peak" },
+            { src: "assets/img/gallery/new9.jpg", title: "River Flow" },
+            { src: "assets/img/gallery/new10.jpg", title: "Golden Field" }
+        ];
+
+        const gallery = document.getElementById("gallery");
+
+        images.forEach((img) => {
+            const col = document.createElement("div");
+            col.className = "col-sm-6 col-md-4 mb-0"; // no margin bottom for no gaps
+
+            col.innerHTML = `
+      <div class="gallery-item">
+        <img src="${img.src}" alt="${img.title}" />
+        <div class="overlay"><p>${img.title}</p></div>
+      </div>
+    `;
+            gallery.appendChild(col);
+        });
+
+        // Initialize Masonry after images loaded
+        window.onload = function () {
+            new Masonry("#gallery", {
+                itemSelector: ".col-md-4",
+                gutter: 20,
+                fitWidth: true
+            });
+        };
+    </script>
+
+</body>
+
+</html>

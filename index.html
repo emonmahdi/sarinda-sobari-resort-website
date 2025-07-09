@@ -185,14 +185,7 @@
       </div>
 
       <div class="row align-items-center gy-5">
-        <!-- Left Image -->
-        <div class="col-lg-6" data-aos="flip-left">
-          <div class="about-image-wrapper">
-            <img src="assets/img/s4.jpg" alt="Resort View" class="img-fluid about-img shadow" />
-          </div>
-        </div>
-
-        <!-- Right Content -->
+        <!-- Left Content -->
         <div class="col-lg-6" data-aos="fade-up">
           <div class="about-content">
             <h3 class="about-title">Welcome to <span class="span-highlight-text">Sarinda Sobari Resort</span></h3>
@@ -208,6 +201,19 @@
               solo recharge, or family vacation — we offer the space, service, and soul you seek.
             </p>
             <a href="#contact" class="btn btn-glass mt-3">Plan Your Stay</a>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="col-lg-6" data-aos="flip-left">
+          <div class="about-image-wrapper text-center">
+            <img src="assets/img/s4.jpg" alt="Resort View" class="img-fluid about-img" />
+            <div class="sub-about-img">
+              <img src="assets/img/s3.jpg" alt="Resort View" class="img-fluid sub-img" />
+            </div>
+            <div class="about-experience">
+              <span>2+ Years</span>
+            </div>
           </div>
         </div>
       </div>
@@ -539,8 +545,74 @@
   <!-- Blog Section End -->
 
   <!-- Food Section Start -->
-  <!-- Restaurant Food Menu Section -->
-  <!-- Restaurant Food Menu Section -->
+  <!-- social-work Section -->
+  <section class="social-work-section py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
+        <h2>Experience Through Images</h2>
+        <p>
+          Let our gallery inspire your next visit, showcasing the essence of relaxation and adventure that awaits you.
+        </p>
+      </div>
+
+      <div class="social-gallery-content">
+        <div class="masonry-gallery">
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
+            <img src="assets/img/gallery/new6-683x1024.jpg" alt="Image 6" />
+            <div class="overlay">
+              <p>Amenities</p>
+              <h4>Floating Breakfast</h4>
+            </div>
+          </div>
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+            <img src="assets/img/gallery/new1.jpg" alt="Image 1" />
+            <div class="overlay">
+              <p>Amenities</p>
+              <h4>Kitchen</h4>
+            </div>
+          </div>
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+            <img src="assets/img/gallery/new3.jpg" alt="Image 1" />
+            <div class="overlay">
+              <p>Amenities</p>
+              <h4>Living Room</h4>
+            </div>
+          </div>
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
+            <img src="assets/img/gallery/new2-683x1024.jpg" alt="Image 1" />
+            <div class="overlay">
+              <p>Service</p>
+              <h4>Spa & Massage</h4>
+            </div>
+          </div>
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+            <img src="assets/img/gallery/new4-683x1024.jpg" alt="Image 1" />
+            <div class="overlay">
+              <p>Amenities</p>
+              <h4>Private Pool</h4>
+            </div>
+          </div>
+          <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+            <img src="assets/img/gallery/new5.jpg" alt="Image 1" />
+            <div class="overlay">
+              <p>Amenities</p>
+              <h4>Bathroom</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lightbox Modal -->
+      <div class="image-modal d-none" id="imageModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="nav left" onclick="prevImage()">&#10094;</span>
+        <img id="modalImage" src="" alt="Popup Image" />
+        <span class="nav right" onclick="nextImage()">&#10095;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- social-work Section -->
   <section class="restaurant-section py-5" style="background-color: #fffaf5;">
     <div class="container">
       <div class="section-header text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
@@ -787,18 +859,7 @@
     });
   </script>
 
-  <!-- Testimonial -->
-
-
-
-
-
-
-
-
-
-
-
+  <!-- Social Work js -->
 </body>
 
 </html>
