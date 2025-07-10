@@ -18,6 +18,12 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -342,6 +348,86 @@
         </div>
     </section>
     <!-- Core Values Section End -->
+    <!-- Testimonials Section Start -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-down" data-aos-duration="1000">
+                <h2>What Our Guests Say</h2>
+                <p>Real experiences from real guests</p>
+            </div>
+
+            <div class="swiper testimonialSwiper" data-aos="zoom-in">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial p-4 bg-white shadow rounded text-center">
+                            <p>"A magical place to reconnect with nature. Exceptional service and views!"</p>
+                            <h6 class="mt-3">— Sarah J., UK</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial p-4 bg-white shadow rounded text-center">
+                            <p>"Perfect honeymoon spot! The lakefront view from our room was unforgettable."</p>
+                            <h6 class="mt-3">— Tanvir A., Dhaka</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial p-4 bg-white shadow rounded text-center">
+                            <p>"Incredible hospitality and nature all around. I’ll visit again for sure."</p>
+                            <h6 class="mt-3">— Emily R., Australia</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial p-4 bg-white shadow rounded text-center">
+                            <p>"The food, the staff, and the peaceful vibe—just wow!"</p>
+                            <h6 class="mt-3">— Ahsan M., Sylhet</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial p-4 bg-white shadow rounded text-center">
+                            <p>"Best weekend getaway I’ve had in years. Totally rejuvenated."</p>
+                            <h6 class="mt-3">— Lisa C., Singapore</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial p-4 bg-white shadow rounded text-center">
+                            <p>"Absolutely loved the lake view and eco-friendly cottages!"</p>
+                            <h6 class="mt-3">— Zayed K., Chittagong</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial p-4 bg-white shadow rounded text-center">
+                            <p>"Our family had a great time here. Kids loved the open space."</p>
+                            <h6 class="mt-3">— Niloy B., Barisal</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial p-4 bg-white shadow rounded text-center">
+                            <p>"It felt like paradise surrounded by nature and warmth."</p>
+                            <h6 class="mt-3">— Julia D., Germany</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial p-4 bg-white shadow rounded text-center">
+                            <p>"Very neat and clean, staff were helpful and attentive."</p>
+                            <h6 class="mt-3">— Kazi R., Dhaka</h6>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial p-4 bg-white shadow rounded text-center">
+                            <p>"Waking up to the sunrise over the lake was a dream!"</p>
+                            <h6 class="mt-3">— Imran S., Rajshahi</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-4"></div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Testimonials Section End -->
+
+
 
 
 
@@ -519,6 +605,35 @@
     </script>
 
     <!-- Testimonial -->
+    <script>
+        const swiper = new Swiper(".testimonialSwiper", {
+            loop: true,
+            autoplay: {
+                delay: 4000, // 4 seconds
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            grabCursor: true,
+            speed: 800,
+            spaceBetween: 30,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+    </script>
+
+
 
 
 
