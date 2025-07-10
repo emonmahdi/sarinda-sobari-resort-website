@@ -1532,13 +1532,23 @@ About Page Styles Start
 -------------------------------- */
 /* Mission & Vision Section Styles */
 .mission-vision-section {
-  background-color: #f9f9f9;
+  background-color: var(--section-bg-color);
 }
 
 .mission-vision-section h2 {
   font-weight: 700;
   font-size: 2.5rem;
   color: #2c3e50;
+}
+.mission-title {
+  background-color: var(--btn-primary-color);
+  color: #000;
+  padding: 5px 10px;
+}
+.vision-title {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 5px 10px;
 }
 
 .mission-vision-section .text-muted {
@@ -1548,7 +1558,7 @@ About Page Styles Start
 
 .mission-vision-section .p-4 {
   position: relative;
-  border-left: 6px solid #3498db;
+  /* border-left: 6px solid #3498db; */
   transition: transform 0.3s ease;
 }
 
@@ -1557,27 +1567,23 @@ About Page Styles Start
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.mission-vision-section h4 {
+/* .mission-vision-section h4 {
   font-size: 1.5rem;
   font-weight: 600;
   position: relative;
   padding-left: 30px;
 }
-
-.mission-vision-section h4::before {
-  content: "★";
-  position: absolute;
-  left: 0;
-  top: 2px;
-  color: #3498db;
-  font-size: 1.2rem;
-}
+  */
 
 .mission-vision-section p {
   font-size: 1rem;
   color: #4a4a4a;
   line-height: 1.7;
   margin-top: 10px;
+}
+.fa-angles-right {
+  color: var(--primary-color);
+  margin-right: 10px;
 }
 /* Core Values Section Styles */
 .core-values-section {
@@ -1590,42 +1596,84 @@ About Page Styles Start
   color: #2c3e50;
 }
 
-.core-values-section .text-muted {
-  font-size: 1.1rem;
-  color: #7f8c8d;
-}
-
-.core-values-section .value-box {
-  transition: all 0.3s ease;
-  border-radius: 12px;
-  background-color: #ffffff;
-  border-top: 4px solid #3498db;
-  padding: 30px 20px;
+.enhanced-box {
+  position: relative;
+  background: url("/assets/img/s2.jpg") center center/cover no-repeat;
+  color: #fff;
+  overflow: hidden;
   height: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
 }
 
-.core-values-section .value-box:hover {
+.enhanced-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.7); /* dark overlay */
+  z-index: 1;
+}
+
+.enhanced-box .icon,
+.enhanced-box h5,
+.enhanced-box p {
+  position: relative;
+  z-index: 2;
+}
+
+.enhanced-box h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.enhanced-box p {
+  font-size: 0.95rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.enhanced-box:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  border-top-color: #1abc9c;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
 }
 
-.core-values-section .value-box h5 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #2c3e50;
-}
-
-.core-values-section .value-box p {
-  color: #4a4a4a;
-  font-size: 1rem;
-  line-height: 1.6;
-}
 /* Manager Section Styles */
 .manager-section {
   background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+.dotted-circle-bg {
+  position: absolute;
+  top: 74px;
+  left: 165px;
+  width: 100%;
+}
+.dotted-circle-bg .line {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.dotted-circle-bg .line span {
+  height: 10px;
+  width: 10px;
+  line-height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px;
+  background-color: var(--primary-color);
+  opacity: 0.4;
 }
 
 .manager-section h2 {
@@ -1700,8 +1748,23 @@ About Page Styles Start
   font-size: 1.1rem;
   line-height: 1.7;
   border-left: 4px solid var(--btn-primary-color);
-  background-color: var(--dark-color);
-  color: #fff;
+  /* background-color: #005fa3; */
+  opacity: 0.8;
+  color: #000;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  position: relative;
+}
+.manager-speech:before {
+  content: "";
+  position: absolute;
+  bottom: -61px;
+  right: -62px;
+  border-top: 70px solid transparent;
+  border-left: 70px solid transparent;
+  border-right: 70px solid var(--primary-color);
+  border-bottom: 70px solid transparent;
+  transform: rotate(224deg);
   border-radius: 5px;
 }
 
@@ -1711,49 +1774,5 @@ About Page Styles Start
   font-size: 1rem;
 }
 .sign-manager {
-  color: var(--btn-primary-color);
-}
-
-/* Why Choose Us Section Styles */
-.why-choose-section {
-  background-color: #f9f9f9;
-}
-
-.why-choose-section h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2c3e50;
-}
-
-.why-choose-section .text-muted {
-  font-size: 1.1rem;
-  color: #7f8c8d;
-}
-
-.feature-box {
-  border-top: 4px solid #3498db;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  padding: 30px 20px;
-  background-color: #ffffff;
-  height: 100%;
-}
-
-.feature-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  border-top-color: #1abc9c;
-}
-
-.feature-box h5 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #2c3e50;
-  margin-bottom: 12px;
-}
-
-.feature-box p {
-  font-size: 1rem;
-  color: #4a4a4a;
-  line-height: 1.6;
+  color: var(--primary-color);
 }
