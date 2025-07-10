@@ -665,6 +665,38 @@ Room Section start
   color: #000;
 }
 
+.booking-modal {
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+.modal-content {
+  animation: fadeInUp 0.4s ease;
+}
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#bookingSummary p {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+#downloadPDF {
+  transition: all 0.3s ease;
+}
+
+#downloadPDF:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
 /* ========================
 Our Services Section start
 ===========================*/
